@@ -1,7 +1,8 @@
 <ion-pane>
   <ion-header-bar class="bar-balanced">
-    <button class="button button-clear icon ion-ios-home " ng-click="back()"></button>
+    <button class="button button-clear " ng-click="back()">章节</button>
     <h1 class="title" style="color: white;">{{p.currentChapter | chapterFilter}}</h1>
+    <button class="button button-clear icon ion-ios-information-outline" ng-click="goAbout()"></button>
   </ion-header-bar>
 
   <ion-content class="bgcontent" scroll="false">
@@ -9,20 +10,20 @@
     <div style="height: 15px"></div>
     <div align="center">
       <div class="button" ng-click="p.before()">
-        <i class="ion-ios-skipbackward"></i>
+        <i class="ion-ios-skipbackward"></i>&nbsp;上一节
       </div>
-      <div class="button" ng-click="p.back()">
-        <i class="ion-ios-rewind"></i>
-      </div>
+      <!--<div class="button" ng-click="p.back()">-->
+        <!--<i class="ion-ios-rewind"></i>-->
+      <!--</div>-->
       <div class="button" ng-click="p.playOrPause()">
-        <i class="ion-ios-play" ng-if="p.paused"></i>
-        <i  class="ion-ios-pause" ng-if="!p.paused"></i>
+        <i class="ion-ios-play" ng-if="p.paused">&nbsp;播放</i>
+        <i  class="ion-ios-pause" ng-if="!p.paused">&nbsp;暂停</i>
       </div>
-      <div class="button" ng-click="p.forward()">
-        <i class="ion-ios-fastforward"></i>
-      </div>
+      <!--<div class="button" ng-click="p.forward()">-->
+        <!--<i class="ion-ios-fastforward"></i>-->
+      <!--</div>-->
       <div class="button" ng-click="p.next()">
-        <i class="ion-ios-skipforward"></i>
+        下一节&nbsp;<i class="ion-ios-skipforward"></i>
       </div>
       <!--<div class="button" ng-click="p.setMute()">-->
         <!--<i  class="ion-android-volume-off" ng-if="p.muted"></i>-->
@@ -33,12 +34,6 @@
     <div >
       <img ng-src="{{p.imgs[p.currentChapter]}}" style="width: 100%;">
     </div>
-
-    <!--<div>{{p.duration | timeFilter}}</div>-->
-    <!--<div>currentChapter: {{p.currentChapter | chapterFilter}}</div>-->
-    <!--<div>muted: {{p.muted}}</div>-->
-    <!--<div>paused: {{p.paused}}</div>-->
-    <!--<div>ended: {{p.ended}}</div>-->
 
   </ion-content>
 

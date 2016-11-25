@@ -15,9 +15,7 @@ angular.module('starter.controller',[])
     console.log('PlayerList');
     var vm = this;
     var audio = AudioFactory;
-    vm.goAbout = function(){
-      $state.go('about');
-    };
+
     vm.goPlay = function(chapter){
       console.log(chapter);
       AudioFactory.start(chapter);

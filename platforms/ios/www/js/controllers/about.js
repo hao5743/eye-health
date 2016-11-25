@@ -14,7 +14,8 @@ angular.module('starter.controller')
 .controller('AboutController',['$state',function($state){
   var vm = this;
   vm.back = function(){
-    $state.go('playerList');
+    // $state.go('playerList');
+    history.back();
   };
 
 

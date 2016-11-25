@@ -42,6 +42,6 @@ var app = angular.module('starter');
     }
   });
 app.config(function($stateProvider,$urlRouterProvider){
-  $urlRouterProvider.otherwise("/playerList");
+  $urlRouterProvider.otherwise("/player");
 
 });

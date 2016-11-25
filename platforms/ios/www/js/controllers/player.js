@@ -12,6 +12,10 @@ angular.module('starter.controller')
     $scope.back = function(){
       $state.go('playerList');
     };
+      $scope.goAbout = function(){
+          $state.go('about');
+      };
+
     var dict = [0,46,84,121,162,203,239,277];
     var imgs = ['img/1.jpg','img/1.jpg','img/2.jpg','img/3.jpg','img/4.jpg','img/5.jpg','img/6.jpg','img/6.jpg'];
 
